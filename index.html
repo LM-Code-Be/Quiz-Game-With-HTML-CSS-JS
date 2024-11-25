@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LM-Code Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+  <div id="image-container" class="mb-5 d-flex justify-content-center">
+    <img id="image" src="images/logo.png" alt="Image" class="img-fluid">
+  </div>
+  <h1>LM-Code Quiz - Test de connaissances</h1>
+  <div class="menu">
+    <h2>Dans quel langage de programmation voulez-vous tester vos connaissances ?</h2>
+    <div class="subjects">
+      <div class="subject-button">
+        <button class="small-icon" onclick="startQuiz('php')" style="background-image: url('images/php.svg');" alt="PHP"></button>
+        <p>PHP</p>
+      </div>
+      <div class="subject-button">
+        <button class="small-icon" onclick="startQuiz('python')" style="background-image: url('images/python.svg');" alt="Python"></button>
+        <p>Python</p>
+      </div>
+      <div class="subject-button">
+        <button class="small-icon" onclick="startQuiz('javascript')" style="background-image: url('images/js.svg');" alt="JavaScript"></button>
+        <p>JavaScript</p>
+      </div>
+      <div class="subject-button">
+        <button class="small-icon" onclick="startQuiz('powershell')" style="background-image: url('images/terminal.svg');" alt="Powershell"></button>
+        <p>Powershell</p>
+      </div>
+      <div class="subject-button">
+        <button class="small-icon" onclick="startQuiz('java')" style="background-image: url('images/java.svg');" alt="Java"></button>
+        <p>Java</p>
+      </div>
+    </div>    
+    
+  </div>
+  <div class="quiz" style="display:none;">
+    <div id="progress-bar"></div>
+    <h2 id="question">Affichage de la question</h2>
+    <div id="answer-buttons">
+      <button class="btn">Proposition de réponse 1</button>
+      <button class="btn">Proposition de réponse 2</button>
+      <button class="btn">Proposition de réponse 3</button>
+      <button class="btn">Proposition de réponse 4</button>
+    </div>
+    <div id="feedback" style="display: none;">
+      <div id="success-message" style="display: none;">🎉 Bravo !</div>
+      <div id="failure-message" style="display: none;">😢Ohh Domage !</div>
+    </div>
+    <button id="next-btn">Next</button>
+    <button id="menu-btn" onclick="returnToMenu()">Revenir au menu principal</button>
+  </div>
+</div>
+
+<a href="https://lm-code.be" class="watch-link">LM-Code</a>
+<script src="script.js"></script>
+</body>
+</html>
